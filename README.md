@@ -41,11 +41,14 @@ Step 3 - create a role in the 1111111111 account and allow assume from another a
 
 
 # terraform-modules
-Step 1: Initialize the Terraform working directory
+Step 1: Initialize the Terraform working directory:
+
 terraform init
 
-#Step 2: Review the execution plan
+#Step 2: Review the execution plan:
+
 terraform plan
 
-#Step 3: Apply the changes to  AWS accounts
+#Step 3: Apply the changes to  AWS accounts:
+
 terraform apply 
