@@ -37,7 +37,7 @@ module "ec2_instances" {
 
 
 module "account_0000000_cli_access_iam" {
-  source    = "./modules/iam_users_group"
+  source    = "./iam_users_group"
   providers = {
     aws = aws.account_0000000
   }
@@ -49,7 +49,7 @@ module "account_0000000_cli_access_iam" {
 }
 
 module "account_0000000_full_access_iam" {
-  source    = "./modules/iam_users_group"
+  source    = "./iam_users_group"
   providers = {
     aws = aws.account_0000000
   }
@@ -62,7 +62,7 @@ module "account_0000000_full_access_iam" {
 
 
 module "roleA_admin" {
-  source     = "./modules/iam_role"
+  source     = "./iam_role"
   providers  = { aws = aws.account_000000 }
 
   role_name         = "roleA"
@@ -82,7 +82,7 @@ module "roleA_admin" {
 }
 
 module "roleB_to_assume_roleC" {
-  source     = "./modules/iam_role"
+  source     = "./iam_role"
   providers  = { aws = aws.account_000000 }
 
   role_name       = "roleB"
@@ -97,7 +97,7 @@ module "roleB_to_assume_roleC" {
 }
 
 module "roleC_target" {
-  source     = "./modules/iam_role"
+  source     = "./iam_role"
   providers  = { aws = aws.account_111111 }
 
   role_name       = "roleC"
