@@ -23,7 +23,7 @@ Q2) Step 1 - create basic groups and users in the account 000000000000
    - Aboubacar Maina
 - each group must have appropriate policies
 
- # Refer Module 
+ # Refer Module: iam_users_group  terraform scripts 
 
 Step 2 - create roles in the account 000000000000
   - roleA - administrative role with a policy that allows access to all AWS services except
@@ -31,16 +31,16 @@ IAM
   - roleB - a service role with a policy that allows you to assume the roleC role in the AWS
 account 1111111111
 
-#Refer Module: 
+# Refer Module: iam_role  terraform scripts
 
 Step 3 - create a role in the 1111111111 account and allow assume from another account
 - roleC is a service role that allows full access to the s3 bucket aws-test-bucket
   this role can be called by roleB from the 000000000000 account
 
- #Refer Module: 
+ # Refer Module: iam_role  terraform scripts
 
 
-# terraform-modules
+# terraform-modules 
 Step 1: Initialize the Terraform working directory:
 
 terraform init
