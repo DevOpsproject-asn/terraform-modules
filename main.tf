@@ -1,5 +1,5 @@
 module "ec2_instances" {
-  source = "./ec2_multi-module"  
+  source = "./ec2_multi-instance"  
 
   instances = [
     {
@@ -56,7 +56,7 @@ module "account_0000000_full_access_iam" {
 
   account_id  = "000000000000"
   group_name  = "group2"
-  users       = ["john.doe", "aboubacar.maina"]
+  users       = ["john_doe", "aboubacar_maina"]
   policy_type = "full"
 }
 
